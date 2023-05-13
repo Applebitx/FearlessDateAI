@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151250A02A1027C700697D1B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1512509F2A1027C700697D1B /* MainTabView.swift */; };
+		151250A32A102D0D00697D1B /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151250A22A102D0D00697D1B /* Color + Extension.swift */; };
 		9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA42A10133F00CACB65 /* CupidAIApp.swift */; };
 		9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA62A10133F00CACB65 /* ContentView.swift */; };
 		9767AFA92A10134000CACB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767AFA82A10134000CACB65 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1512509F2A1027C700697D1B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		151250A22A102D0D00697D1B /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		9767AFA12A10133F00CACB65 /* CupidAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9767AFA42A10133F00CACB65 /* CupidAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAIApp.swift; sourceTree = "<group>"; };
 		9767AFA62A10133F00CACB65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1512509B2A1027A200697D1B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1512509C2A1027A600697D1B /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1512509C2A1027A600697D1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1512509D2A1027B200697D1B /* TabBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1512509D2A1027B200697D1B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1512509F2A1027C700697D1B /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		151250A12A102CF800697D1B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				151250A22A102D0D00697D1B /* Color + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9767AF982A10133F00CACB65 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +89,8 @@
 			children = (
 				9767AFA42A10133F00CACB65 /* CupidAIApp.swift */,
 				9767AFA62A10133F00CACB65 /* ContentView.swift */,
+				151250A12A102CF800697D1B /* Extension */,
+				1512509B2A1027A200697D1B /* Core */,
 				9767AFA82A10134000CACB65 /* Assets.xcassets */,
 				9767AFAA2A10134000CACB65 /* Preview Content */,
 			);
@@ -139,6 +177,8 @@
 			files = (
 				9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */,
 				9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */,
+				151250A32A102D0D00697D1B /* Color + Extension.swift in Sources */,
+				151250A02A1027C700697D1B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
