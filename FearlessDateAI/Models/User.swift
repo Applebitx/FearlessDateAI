@@ -30,7 +30,7 @@ struct User: Identifiable, Codable {
     }
     
     static var fetchMock: User {
-        User(id: "1", firstName: "Shur", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: nil, chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil)
+        User(id: "1", firstName: "Shur", lastName: "Bamm", birthday: "22", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl1", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil)
     }
     
     static var fetchMocks: [User] {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155776F52A11649200618810 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155776F42A11649200618810 /* MatchesView.swift */; };
+		155776F82A11678800618810 /* MatchesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155776F72A11678800618810 /* MatchesCardView.swift */; };
 		9702654B2A10243C004E0F3D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9702654A2A10243C004E0F3D /* Realm */; };
 		9702654D2A10243C004E0F3D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9702654C2A10243C004E0F3D /* RealmSwift */; };
 		970265502A102965004E0F3D /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 9702654F2A102965004E0F3D /* SocketIO */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155776F42A11649200618810 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		155776F72A11678800618810 /* MatchesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCardView.swift; sourceTree = "<group>"; };
 		972C1B092A10C2FF00D67F32 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9767AFA12A10133F00CACB65 /* FearlessDateAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FearlessDateAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9767AFA42A10133F00CACB65 /* CupidAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAIApp.swift; sourceTree = "<group>"; };
@@ -87,6 +91,31 @@
 				97E8F4142A11437000728A68 /* Store.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		155776F12A11644E00618810 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				155776F32A11645C00618810 /* ViewModel */,
+				155776F22A11645900618810 /* Views */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		155776F22A11645900618810 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				155776F42A11649200618810 /* MatchesView.swift */,
+				155776F72A11678800618810 /* MatchesCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		155776F32A11645C00618810 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9767AF982A10133F00CACB65 = {
@@ -177,6 +206,7 @@
 		97E8F3FE2A113B6500728A68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				155776F12A11644E00618810 /* Matches */,
 				155776F02A1145A000618810 /* TabView */,
 				97E8F3FF2A113B7A00728A68 /* SwipeView */,
 			);
@@ -331,6 +361,7 @@
 			files = (
 				97E8F4152A11437000728A68 /* Store.swift in Sources */,
 				978642962A10DA9900235E68 /* NetworkMonitor.swift in Sources */,
+				155776F82A11678800618810 /* MatchesCardView.swift in Sources */,
 				97FEFE262A109DC000F41840 /* Data+ext.swift in Sources */,
 				9786428F2A10D3F000235E68 /* Endpoint.swift in Sources */,
 				97E8F4012A113BB500728A68 /* SwipeView.swift in Sources */,
@@ -341,6 +372,7 @@
 				97E8F4072A113C5700728A68 /* SwipeViewModel.swift in Sources */,
 				978642932A10D4AA00235E68 /* RequestError.swift in Sources */,
 				97E8F3F82A11170600728A68 /* AuthEndpoint.swift in Sources */,
+				155776F52A11649200618810 /* MatchesView.swift in Sources */,
 				9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */,
 				97E8F4032A113BF900728A68 /* SwipeCardView.swift in Sources */,
 				97E8F3FD2A113AAB00728A68 /* View + ext.swift in Sources */,

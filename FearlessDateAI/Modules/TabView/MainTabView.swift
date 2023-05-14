@@ -24,7 +24,7 @@ struct MainTabView: View {
                 }
                 .tag(Tab.swipes)
             
-            Text("Matches")
+            MatchesView()
                 .tabItem {
                     Image(systemName: "heart")
                     
