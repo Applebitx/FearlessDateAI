@@ -33,29 +33,48 @@ struct SwipeCardView: View {
                     .offset(y: -topOffset)
                     .overlay(alignment: .bottom) {
                             VStack(alignment: .leading, spacing: 6) {
-                                HStack {
-                                    Text("\(user.firstName ?? "") ," )
-                                        .font(.title)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    
-                                    Text(user.birthday ?? "")
-                                        .font(.title)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                }
-                                
-                                Text(user.lastName ?? "")
-                                    .font(.title3)
-                                    .fontWeight(.semibold)
+                                Image(systemName: vm.fullDetailInfo ? "chevron.down" : "chevron.up")
+                                    .resizable()
+                                    .frame(width: 25, height: 15)
                                     .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .animation(.easeIn(duration: 0.5), value: vm.fullDetailInfo)
+                                    .onTapGesture {
+                                        withAnimation() {
+                                            vm.fullDetailInfo = !vm.fullDetailInfo
+                                        }
+                                    }
+                                
+                                Group {
+                                    HStack {
+                                        Text("\(user.firstName ?? "") ," )
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .bold()
+                                        
+                                        Text(user.birthday ?? "")
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .bold()
+                                    }
+                                    
+                                    Text(user.lastName ?? "")
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.white)
+                                }
+                                .offset(y: -5)
                                 
                                 Spacer()
                             }
-                            .frame(height: 80)
+                            .frame(maxHeight: vm.fullDetailInfo ? .infinity : 80)
                             .padding([.leading, .top], 20)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(BlurView(style: .systemChromeMaterialDark).opacity(0.9).cornerRadius(15))
+                            .background(
+                                BlurView(style: .systemChromeMaterialDark).opacity(0.9).cornerRadius(15)
+                            )
+                            .animation(.interactiveSpring(response: 0.7, dampingFraction: 0.7, blendDuration: 0.7), value: vm.fullDetailInfo)
+                        
                     }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -63,6 +82,7 @@ struct SwipeCardView: View {
         .offset(x: offset)
         .rotationEffect(.init(degrees: getRotation(angle: 8)))
         .contentShape(Rectangle().trim(from: 0, to: endSwipe ? 0 : 1))
+        .shadow(color: Color.black.opacity(0.4), radius: 10, x: 0, y: 5)
         .gesture(
             dragGesture
         )

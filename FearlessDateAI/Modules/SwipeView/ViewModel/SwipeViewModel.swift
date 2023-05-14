@@ -10,6 +10,7 @@ import Foundation
 final class SwipeViewModel: ObservableObject {
     @Published var users: [User] = []
     @Published var displayingUsers: [User]?
+    @Published var fullDetailInfo: Bool = false
     
     init() {
         users = User.fetchMocks
@@ -27,10 +28,12 @@ final class SwipeViewModel: ObservableObject {
     
     func leftSwipe() {
         print("leftswipe")
+        fullDetailInfo = false
     }
     
     func rightSwipe() {
         print("rightSwipe")
+        fullDetailInfo = false
     }
     
 }

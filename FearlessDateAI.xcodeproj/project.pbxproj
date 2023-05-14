@@ -80,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		155776F02A1145A000618810 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				97E8F4102A113E1A00728A68 /* MainTabView.swift */,
+				97E8F4142A11437000728A68 /* Store.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		9767AF982A10133F00CACB65 = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +177,7 @@
 		97E8F3FE2A113B6500728A68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				97E8F4102A113E1A00728A68 /* MainTabView.swift */,
-				97E8F4142A11437000728A68 /* Store.swift */,
+				155776F02A1145A000618810 /* TabView */,
 				97E8F3FF2A113B7A00728A68 /* SwipeView */,
 			);
 			path = Modules;
