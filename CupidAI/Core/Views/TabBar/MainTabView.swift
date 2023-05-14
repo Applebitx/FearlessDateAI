@@ -16,7 +16,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $store.currentTab) {
-            Text("SwipeView")
+            SwipeView()
                 .tabItem {
                     Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled.fill")
                     

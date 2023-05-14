@@ -10,6 +10,10 @@
 		151250A02A1027C700697D1B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1512509F2A1027C700697D1B /* MainTabView.swift */; };
 		151250A32A102D0D00697D1B /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151250A22A102D0D00697D1B /* Color + Extension.swift */; };
 		151250A72A109B1E00697D1B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151250A62A109B1E00697D1B /* Store.swift */; };
+		15F692BA2A10B174002E54E5 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692B92A10B174002E54E5 /* SwipeView.swift */; };
+		15F692BC2A10B250002E54E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692BB2A10B250002E54E5 /* User.swift */; };
+		15F692BE2A10B35A002E54E5 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692BD2A10B35A002E54E5 /* SwipeCardView.swift */; };
+		15F692C12A10B5DB002E54E5 /* SwipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */; };
 		9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA42A10133F00CACB65 /* CupidAIApp.swift */; };
 		9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA62A10133F00CACB65 /* ContentView.swift */; };
 		9767AFA92A10134000CACB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767AFA82A10134000CACB65 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 		1512509F2A1027C700697D1B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		151250A22A102D0D00697D1B /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		151250A62A109B1E00697D1B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		15F692B92A10B174002E54E5 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		15F692BB2A10B250002E54E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = CupidAI/Core/Views/SwipeView/User.swift; sourceTree = SOURCE_ROOT; };
+		15F692BD2A10B35A002E54E5 /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewModel.swift; sourceTree = "<group>"; };
 		9767AFA12A10133F00CACB65 /* CupidAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9767AFA42A10133F00CACB65 /* CupidAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAIApp.swift; sourceTree = "<group>"; };
 		9767AFA62A10133F00CACB65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 		1512509C2A1027A600697D1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				15F692B82A10B168002E54E5 /* SwipeView */,
 				1512509D2A1027B200697D1B /* TabBar */,
 			);
 			path = Views;
@@ -74,6 +83,7 @@
 		151250A42A109B0500697D1B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				15F692BF2A10B5CB002E54E5 /* SwipeViewModel */,
 				151250A52A109B1600697D1B /* Store */,
 			);
 			path = ViewModels;
@@ -90,8 +100,26 @@
 		151250A82A109B6100697D1B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15F692BB2A10B250002E54E5 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		15F692B82A10B168002E54E5 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				15F692B92A10B174002E54E5 /* SwipeView.swift */,
+				15F692BD2A10B35A002E54E5 /* SwipeCardView.swift */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
+		15F692BF2A10B5CB002E54E5 /* SwipeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */,
+			);
+			path = SwipeViewModel;
 			sourceTree = "<group>";
 		};
 		9767AF982A10133F00CACB65 = {
@@ -204,9 +232,13 @@
 			files = (
 				151250A72A109B1E00697D1B /* Store.swift in Sources */,
 				9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */,
+				15F692C12A10B5DB002E54E5 /* SwipeViewModel.swift in Sources */,
 				9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */,
+				15F692BE2A10B35A002E54E5 /* SwipeCardView.swift in Sources */,
+				15F692BA2A10B174002E54E5 /* SwipeView.swift in Sources */,
 				151250A32A102D0D00697D1B /* Color + Extension.swift in Sources */,
 				151250A02A1027C700697D1B /* MainTabView.swift in Sources */,
+				15F692BC2A10B250002E54E5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
