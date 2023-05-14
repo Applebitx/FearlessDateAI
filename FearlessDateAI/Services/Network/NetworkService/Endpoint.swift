@@ -14,3 +14,8 @@ public protocol Endpoint {
     var parameters: [String: Any]? { get }
     var url: URL? { get }
 }
+
+extension Endpoint {
+    var url: URL? {
+        return URL(string: "base url")}
+}
