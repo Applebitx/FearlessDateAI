@@ -12,18 +12,36 @@
 		970265502A102965004E0F3D /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 9702654F2A102965004E0F3D /* SocketIO */; };
 		970265532A102D08004E0F3D /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 970265522A102D08004E0F3D /* MessageKit */; };
 		970265562A102DEC004E0F3D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 970265552A102DEC004E0F3D /* SDWebImageSwiftUI */; };
+		972C1B0A2A10C2FF00D67F32 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C1B092A10C2FF00D67F32 /* APIManager.swift */; };
 		9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA42A10133F00CACB65 /* CupidAIApp.swift */; };
 		9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA62A10133F00CACB65 /* ContentView.swift */; };
 		9767AFA92A10134000CACB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767AFA82A10134000CACB65 /* Assets.xcassets */; };
 		9767AFAC2A10134000CACB65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767AFAB2A10134000CACB65 /* Preview Assets.xcassets */; };
+		9786428D2A10D34700235E68 /* Locale + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786428C2A10D34700235E68 /* Locale + ext.swift */; };
+		9786428F2A10D3F000235E68 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786428E2A10D3F000235E68 /* Endpoint.swift */; };
+		978642912A10D41B00235E68 /* UploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978642902A10D41B00235E68 /* UploadData.swift */; };
+		978642932A10D4AA00235E68 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978642922A10D4AA00235E68 /* RequestError.swift */; };
+		978642962A10DA9900235E68 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978642952A10DA9900235E68 /* NetworkMonitor.swift */; };
+		97C52AD62A107C2300958F68 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C52AD52A107C2300958F68 /* RequestType.swift */; };
+		97FEFE262A109DC000F41840 /* Data+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FEFE252A109DC000F41840 /* Data+ext.swift */; };
+		97FEFE282A109ED200F41840 /* URL + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FEFE272A109ED200F41840 /* URL + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		972C1B092A10C2FF00D67F32 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9767AFA12A10133F00CACB65 /* FearlessDateAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FearlessDateAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9767AFA42A10133F00CACB65 /* CupidAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAIApp.swift; sourceTree = "<group>"; };
 		9767AFA62A10133F00CACB65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9767AFA82A10134000CACB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9767AFAB2A10134000CACB65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9786428C2A10D34700235E68 /* Locale + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale + ext.swift"; sourceTree = "<group>"; };
+		9786428E2A10D3F000235E68 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		978642902A10D41B00235E68 /* UploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadData.swift; sourceTree = "<group>"; };
+		978642922A10D4AA00235E68 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		978642952A10DA9900235E68 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		97C52AD52A107C2300958F68 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		97FEFE252A109DC000F41840 /* Data+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ext.swift"; sourceTree = "<group>"; };
+		97FEFE272A109ED200F41840 /* URL + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,8 @@
 		9767AFA32A10133F00CACB65 /* FearlessDateAI */ = {
 			isa = PBXGroup;
 			children = (
+				97C52AD22A107A9800958F68 /* Services */,
+				97FEFE232A109D8B00F41840 /* Common */,
 				9767AFA42A10133F00CACB65 /* CupidAIApp.swift */,
 				9767AFA62A10133F00CACB65 /* ContentView.swift */,
 				9767AFA82A10134000CACB65 /* Assets.xcassets */,
@@ -75,6 +95,53 @@
 				9767AFAB2A10134000CACB65 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97C52AD22A107A9800958F68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				97C52AD32A107AAC00958F68 /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		97C52AD32A107AAC00958F68 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				97C52AD42A107AB600958F68 /* NetworkService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97C52AD42A107AB600958F68 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				97C52AD52A107C2300958F68 /* RequestType.swift */,
+				972C1B092A10C2FF00D67F32 /* APIManager.swift */,
+				9786428E2A10D3F000235E68 /* Endpoint.swift */,
+				978642902A10D41B00235E68 /* UploadData.swift */,
+				978642922A10D4AA00235E68 /* RequestError.swift */,
+				978642952A10DA9900235E68 /* NetworkMonitor.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		97FEFE232A109D8B00F41840 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				97FEFE242A109DA200F41840 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		97FEFE242A109DA200F41840 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97FEFE252A109DC000F41840 /* Data+ext.swift */,
+				97FEFE272A109ED200F41840 /* URL + ext.swift */,
+				9786428C2A10D34700235E68 /* Locale + ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +227,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978642962A10DA9900235E68 /* NetworkMonitor.swift in Sources */,
+				97FEFE262A109DC000F41840 /* Data+ext.swift in Sources */,
+				9786428F2A10D3F000235E68 /* Endpoint.swift in Sources */,
+				9786428D2A10D34700235E68 /* Locale + ext.swift in Sources */,
+				97FEFE282A109ED200F41840 /* URL + ext.swift in Sources */,
+				978642912A10D41B00235E68 /* UploadData.swift in Sources */,
 				9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */,
+				978642932A10D4AA00235E68 /* RequestError.swift in Sources */,
 				9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */,
+				97C52AD62A107C2300958F68 /* RequestType.swift in Sources */,
+				972C1B0A2A10C2FF00D67F32 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +365,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupidAI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "FearlessDateAI/FearlessDateAI/Preview Content";
 				DEVELOPMENT_TEAM = P9WCSS3KFX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +394,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupidAI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "FearlessDateAI/FearlessDateAI/Preview Content";
 				DEVELOPMENT_TEAM = P9WCSS3KFX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
