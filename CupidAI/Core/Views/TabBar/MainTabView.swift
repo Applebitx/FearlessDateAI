@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject private var store: Store
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor(named: "TabBarBackgroundColor")
         }
     
     var body: some View {
-        TabView {
+        TabView(selection: $store.currentTab) {
             Text("SwipeView")
                 .tabItem {
                     Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled.fill")
                     
                     Text("Swipes")
                 }
+                .tag(Tab.swipes)
             
             Text("Matches")
                 .tabItem {
@@ -27,6 +30,7 @@ struct MainTabView: View {
                     
                     Text("Matches")
                 }
+                .tag(Tab.matches)
             
             Text("Messages")
                 .tabItem {
@@ -34,6 +38,7 @@ struct MainTabView: View {
                     
                     Text("Messages")
                 }
+                .tag(Tab.messages)
             
             Text("Profile")
                 .tabItem {
@@ -41,6 +46,7 @@ struct MainTabView: View {
                     
                     Text("Account")
                 }
+                .tag(Tab.profile)
         }
         .accentColor(.redColor)
     }
@@ -49,5 +55,6 @@ struct MainTabView: View {
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+            .environmentObject(Store())
     }
 }

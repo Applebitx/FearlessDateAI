@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CupidAIApp: App {
+    @StateObject private var store = Store()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(store)
         }
     }
 }
