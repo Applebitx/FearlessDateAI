@@ -137,21 +137,21 @@ private extension APIManager {
             var httpBody = Data()
             if let parameters {
                 for (key, value) in parameters {
-                    httpBody.appendString(string: "--\(boundaryString)\r\n")
-                    httpBody.appendString(string: "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-                    httpBody.appendString(string: "\(value)\r\n")
-                    httpBody.appendString(string: "--\(boundaryString)--\r\n")
+                    httpBody.append(_: "--\(boundaryString)\r\n")
+                    httpBody.append(_: "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                    httpBody.append(_: "\(value)\r\n")
+                    httpBody.append(_: "--\(boundaryString)--\r\n")
                 }
             }
 
             let mimetype = file.mimetype ?? "someType"
             let filename = String(Int(Date().timeIntervalSince1970)) + mimetype
-            httpBody.appendString(string: "--\(boundary ?? "")\r\n")
-            httpBody.appendString(string: "Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
-            httpBody.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
+            httpBody.append(_: "--\(boundary ?? "")\r\n")
+            httpBody.append(_: "Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
+            httpBody.append(_: "Content-Type: \(mimetype)\r\n\r\n")
             httpBody.append(file.file)
-            httpBody.appendString(string: "\r\n")
-            httpBody.appendString(string: "--\(boundary ?? "")--\r\n")
+            httpBody.append(_: "\r\n")
+            httpBody.append(_: "--\(boundary ?? "")--\r\n")
             return httpBody
         } else {
             guard let parameters,
@@ -171,7 +171,7 @@ private extension APIManager {
                 url: url,
                 endpoint: endpoint
             )
-        case .post, .put, .patch, .delete:
+        case .post, .put, .delete, .connect:
             return createPostRequestWithBody(
                 url: url,
                 endpoint: endpoint,
