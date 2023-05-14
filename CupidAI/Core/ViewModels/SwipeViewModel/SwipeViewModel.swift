@@ -16,4 +16,21 @@ final class SwipeViewModel: ObservableObject {
         
         displayingUsers = users
     }
+    
+    func getIndex(user: User) -> Int {
+        let index = displayingUsers?.firstIndex(where: { currentUser in
+            return user.id == currentUser.id
+        }) ?? 00
+        
+        return index
+    }
+    
+    func leftSwipe() {
+        print("leftswipe")
+    }
+    
+    func rightSwipe() {
+        print("rightSwipe")
+    }
+    
 }

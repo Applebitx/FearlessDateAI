@@ -36,6 +36,9 @@ struct User: Identifiable, Codable {
     static var fetchMocks: [User] {
         [User(id: "1", firstName: "Shur", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl1", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil),
          User(id: "2", firstName: "Shur22", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl2", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil),
-         User(id: "3", firstName: "Shur33", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl3", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil)]
+         User(id: "3", firstName: "Shur33", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl3", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil),
+         User(id: "4", firstName: "Shur33", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl1", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil),
+         User(id: "5", firstName: "Shur33", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl2", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil),
+         User(id: "6", firstName: "Shur33", lastName: "Bamm", birthday: "03.03.02", gender: nil, interests: nil, displayGender: nil, passion: nil, email: nil, profilePicture: "girl3", chatStatus: nil, userStatus: nil, userRole: nil, phoneNumber: nil)]
     }
 }
