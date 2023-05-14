@@ -36,57 +36,10 @@ struct SwipeCardView: View {
         .rotationEffect(.init(degrees: getRotation(angle: 8)))
         .contentShape(Rectangle().trim(from: 0, to: endSwipe ? 0 : 1))
         .gesture(
-            DragGesture()
-                .updating($isDragging, body: { value, out, _ in
-                    out = true
-                })
-                .onChanged({ value in
-                    let translation = value.translation.width
-                    offset = (isDragging ? translation : .zero)
-                })
-                .onEnded({ value in
-                    let width = getRect().width - 50
-                    let translation = value.translation.width
-                    
-                    let checkingStatus = (translation > 0 ? translation : -translation)
-                    
-                    withAnimation {
-                        if checkingStatus > (width / 2) {
-                            offset = (translation > 0 ? width : -width) * 2
-                            
-                            endSwipeAction()
-                            
-                            if translation > 0 {
-                                vm.rightSwipe()
-                            } else {
-                                vm.leftSwipe()
-                            }
-                        } else {
-                            offset = .zero
-                        }
-                    }
-                })
+            dragGesture
         )
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ACTIONFROMBUTTON"), object: nil)) { data in
-            guard let info = data.userInfo else {
-                return
-            }
-            
-            let id = info["id"] as? String ?? ""
-            let rightSwipe = info["rightSwipe"] as? Bool ?? false
-            let width = getRect().width - 50
-            
-            if user.id == id {
-                offset = (rightSwipe ? width : -width) * 2
-                
-                endSwipeAction()
-                
-                if rightSwipe {
-                    vm.rightSwipe()
-                } else {
-                    vm.leftSwipe()
-                }
-            }
+            monitoringSwipes(data: data)
         }
     }
 }
@@ -115,4 +68,63 @@ extension SwipeCardView {
     private func getRotation(angle: Double) -> Double {
         return (offset / (getRect().width - 50)) * angle
     }
+    
+    private func monitoringSwipes(data: Notification) {
+        guard let info = data.userInfo else {
+            return
+        }
+        
+        let id = info["id"] as? String ?? ""
+        let rightSwipe = info["rightSwipe"] as? Bool ?? false
+        let width = getRect().width - 50
+        
+        if user.id == id {
+            offset = (rightSwipe ? width : -width) * 2
+            
+            endSwipeAction()
+            
+            if rightSwipe {
+                vm.rightSwipe()
+            } else {
+                vm.leftSwipe()
+            }
+        }
+    }
 }
+
+//MARK: GESTURE
+extension SwipeCardView {
+    private var dragGesture: some Gesture {
+        DragGesture()
+            .updating($isDragging, body: { value, out, _ in
+                out = true
+            })
+            .onChanged({ value in
+                let translation = value.translation.width
+                offset = (isDragging ? translation : .zero)
+            })
+            .onEnded({ value in
+                let width = getRect().width - 50
+                let translation = value.translation.width
+                
+                let checkingStatus = (translation > 0 ? translation : -translation)
+                
+                withAnimation {
+                    if checkingStatus > (width / 2) {
+                        offset = (translation > 0 ? width : -width) * 2
+                        
+                        endSwipeAction()
+                        
+                        if translation > 0 {
+                            vm.rightSwipe()
+                        } else {
+                            vm.leftSwipe()
+                        }
+                    } else {
+                        offset = .zero
+                    }
+                }
+            })
+    }
+}
+
