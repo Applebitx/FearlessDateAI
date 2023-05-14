@@ -12,6 +12,10 @@ struct SwipeView: View {
     
     var body: some View {
         VStack {
+            Text("Discover")
+                .font(.title)
+                .fontWeight(.bold)
+            
             ZStack {
                 if let users = vm.displayingUsers {
                     
@@ -29,7 +33,7 @@ struct SwipeView: View {
                 }
             }
             .padding()
-            .padding(.vertical)
+            .padding(.vertical, 20)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }

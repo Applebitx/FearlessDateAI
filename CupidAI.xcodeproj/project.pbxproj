@@ -15,6 +15,7 @@
 		15F692BE2A10B35A002E54E5 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692BD2A10B35A002E54E5 /* SwipeCardView.swift */; };
 		15F692C12A10B5DB002E54E5 /* SwipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */; };
 		15F692C32A10C394002E54E5 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692C22A10C394002E54E5 /* View + Extension.swift */; };
+		15F692C62A10F13F002E54E5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F692C52A10F13F002E54E5 /* BlurView.swift */; };
 		9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA42A10133F00CACB65 /* CupidAIApp.swift */; };
 		9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9767AFA62A10133F00CACB65 /* ContentView.swift */; };
 		9767AFA92A10134000CACB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767AFA82A10134000CACB65 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		15F692BD2A10B35A002E54E5 /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewModel.swift; sourceTree = "<group>"; };
 		15F692C22A10C394002E54E5 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
+		15F692C52A10F13F002E54E5 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		9767AFA12A10133F00CACB65 /* CupidAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupidAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9767AFA42A10133F00CACB65 /* CupidAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAIApp.swift; sourceTree = "<group>"; };
 		9767AFA62A10133F00CACB65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		1512509B2A1027A200697D1B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				15F692C42A10F132002E54E5 /* Common */,
 				151250A42A109B0500697D1B /* ViewModels */,
 				1512509C2A1027A600697D1B /* Views */,
 			);
@@ -123,6 +126,14 @@
 				15F692C02A10B5DB002E54E5 /* SwipeViewModel.swift */,
 			);
 			path = SwipeViewModel;
+			sourceTree = "<group>";
+		};
+		15F692C42A10F132002E54E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				15F692C52A10F13F002E54E5 /* BlurView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9767AF982A10133F00CACB65 = {
@@ -237,6 +248,7 @@
 				9767AFA72A10133F00CACB65 /* ContentView.swift in Sources */,
 				15F692C12A10B5DB002E54E5 /* SwipeViewModel.swift in Sources */,
 				9767AFA52A10133F00CACB65 /* CupidAIApp.swift in Sources */,
+				15F692C62A10F13F002E54E5 /* BlurView.swift in Sources */,
 				15F692BE2A10B35A002E54E5 /* SwipeCardView.swift in Sources */,
 				15F692BA2A10B174002E54E5 /* SwipeView.swift in Sources */,
 				151250A32A102D0D00697D1B /* Color + Extension.swift in Sources */,

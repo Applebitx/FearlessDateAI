@@ -20,15 +20,43 @@ struct SwipeCardView: View {
         GeometryReader { proxy in
             let size = proxy.size
             let index = CGFloat(vm.getIndex(user: user))
-            let topOffset = (index <= 2 ? index : 2) * 15
+            let topOffset = (index <= 3 ? index : 3) * 15
             
             ZStack {
+                likeAndDisLikeView
+                
                 Image(user.profilePicture ?? "girl1")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size.width - topOffset, height: size.height)
                     .cornerRadius(15)
                     .offset(y: -topOffset)
+                    .overlay(alignment: .bottom) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                HStack {
+                                    Text("\(user.firstName ?? "") ," )
+                                        .font(.title)
+                                        .foregroundColor(.white)
+                                        .bold()
+                                    
+                                    Text(user.birthday ?? "")
+                                        .font(.title)
+                                        .foregroundColor(.white)
+                                        .bold()
+                                }
+                                
+                                Text(user.lastName ?? "")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                
+                                Spacer()
+                            }
+                            .frame(height: 80)
+                            .padding([.leading, .top], 20)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(BlurView(style: .systemChromeMaterialDark).opacity(0.9).cornerRadius(15))
+                    }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
@@ -70,9 +98,7 @@ extension SwipeCardView {
     }
     
     private func monitoringSwipes(data: Notification) {
-        guard let info = data.userInfo else {
-            return
-        }
+        guard let info = data.userInfo else { return }
         
         let id = info["id"] as? String ?? ""
         let rightSwipe = info["rightSwipe"] as? Bool ?? false
@@ -83,11 +109,7 @@ extension SwipeCardView {
             
             endSwipeAction()
             
-            if rightSwipe {
-                vm.rightSwipe()
-            } else {
-                vm.leftSwipe()
-            }
+            rightSwipe ? vm.rightSwipe() : vm.leftSwipe()
         }
     }
 }
@@ -101,12 +123,13 @@ extension SwipeCardView {
             })
             .onChanged({ value in
                 let translation = value.translation.width
-                offset = (isDragging ? translation : .zero)
+                withAnimation {
+                    offset = (isDragging ? translation : .zero)
+                }
             })
             .onEnded({ value in
                 let width = getRect().width - 50
                 let translation = value.translation.width
-                
                 let checkingStatus = (translation > 0 ? translation : -translation)
                 
                 withAnimation {
@@ -115,11 +138,7 @@ extension SwipeCardView {
                         
                         endSwipeAction()
                         
-                        if translation > 0 {
-                            vm.rightSwipe()
-                        } else {
-                            vm.leftSwipe()
-                        }
+                        translation > 0 ? vm.rightSwipe() : vm.leftSwipe()
                     } else {
                         offset = .zero
                     }
@@ -128,3 +147,22 @@ extension SwipeCardView {
     }
 }
 
+//MARK: Components
+extension SwipeCardView {
+    private var likeAndDisLikeView: some View {
+        Image(systemName: offset > 0 ? "heart.fill" : "xmark")
+            .resizable()
+            .fontWeight(.bold)
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 35, height: 35)
+            .foregroundColor(.red)
+            .zIndex(1)
+            .background(
+                Circle()
+                    .frame(width: 80, height: 80)
+                    .foregroundColor(.white)
+            )
+            .opacity(offset > 60 || offset < -60 ? 1 : 0)
+            .scaleEffect(offset > 60 || offset < -60 ? 1 : 0.001)
+    }
+}
