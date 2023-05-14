@@ -206,8 +206,8 @@
 		97E8F3FE2A113B6500728A68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				155776F12A11644E00618810 /* Matches */,
 				155776F02A1145A000618810 /* TabView */,
+				155776F12A11644E00618810 /* Matches */,
 				97E8F3FF2A113B7A00728A68 /* SwipeView */,
 			);
 			path = Modules;
