@@ -15,6 +15,7 @@ struct SwipeView: View {
             Text("Discover")
                 .font(.title)
                 .fontWeight(.bold)
+                .foregroundColor(.redColor)
             
             ZStack {
                 if let users = vm.displayingUsers {

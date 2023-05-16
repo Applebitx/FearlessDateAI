@@ -40,7 +40,7 @@ struct MainTabView: View {
                 }
                 .tag(Tab.messages)
             
-            Text("Profile")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     
