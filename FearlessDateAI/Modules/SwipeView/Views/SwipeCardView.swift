@@ -33,18 +33,6 @@ struct SwipeCardView: View {
                     .offset(y: -topOffset)
                     .overlay(alignment: .bottom) {
                             VStack(alignment: .leading, spacing: 6) {
-                                Image(systemName: vm.fullDetailInfo ? "chevron.down" : "chevron.up")
-                                    .resizable()
-                                    .frame(width: 25, height: 15)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .animation(.easeIn(duration: 0.5), value: vm.fullDetailInfo)
-                                    .onTapGesture {
-                                        withAnimation() {
-                                            vm.fullDetailInfo = !vm.fullDetailInfo
-                                        }
-                                    }
-                                
                                 Group {
                                     HStack {
                                         Text("\(user.firstName ?? "") ," )
@@ -74,6 +62,11 @@ struct SwipeCardView: View {
                                 BlurView(style: .systemChromeMaterialDark).opacity(0.9).cornerRadius(15)
                             )
                             .animation(.interactiveSpring(response: 0.7, dampingFraction: 0.7, blendDuration: 0.7), value: vm.fullDetailInfo)
+                            .onTapGesture {
+                                withAnimation() {
+                                    vm.fullDetailInfo = !vm.fullDetailInfo
+                                }
+                            }
                         
                     }
             }

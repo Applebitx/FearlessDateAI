@@ -60,6 +60,7 @@ extension MatchesView {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 0.5)
             }
+            .foregroundColor(.redColor)
         }
         .padding(.horizontal)
     }
